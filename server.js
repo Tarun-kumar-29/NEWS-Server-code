@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const OPENROUTER_API_KEY = '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';
+const OPENROUTER_API_KEY = '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';
 const GNEWS_API_KEY = '0129b35214bbbb58318db0f8e0a82299';
 
 app.use(cors());
@@ -44,9 +44,9 @@ ${JSON.stringify(articles, null, 2)}
 `;
 console.log('Sending to AI model...');
 const aiResponse = await axios.post(
-    'https://openrouter.ai/api/v1/chat/completions',
+    'https://api.groq.com/openai/v1/chat/completions',
     {
-      model: "deepseek/deepseek-chat-v3-0324:free",
+      model: "llama-3.1-8b-instant",
       messages: [
         { role: "system", content: "You are a helpful news summarizer." },
         { role: "user", content: prompt }
