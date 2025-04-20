@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const OPENROUTER_API_KEY = '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';
+const OPENROUTER_API_KEY = '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';
 const GNEWS_API_KEY = '0129b35214bbbb58318db0f8e0a82299';
 
 app.use(cors());
